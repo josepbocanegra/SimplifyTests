@@ -1,0 +1,14 @@
+﻿<ArrayOfCustomer xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Customer>
+    <FirstName>Mandy</FirstName>
+    <LastName>Harris</LastName>
+  </Customer>
+  <Customer>
+    <FirstName>John</FirstName>
+    <LastName>Smith</LastName>
+  </Customer>
+  <Customer>
+    <FirstName>Albert</FirstName>
+    <LastName>Thomson</LastName>
+  </Customer>
+</ArrayOfCustomer>
