@@ -39,7 +39,7 @@ namespace SimplifyTests
                 using (var writer = XmlWriter.Create(stringWriter))
                 {
                     var serializer = new XmlSerializer(vipCustomers.GetType());
-                    serializer.Serialize(writer, vipCustomers);
+                    serializer.Serialize(writer, vipCustomers.OrderBy(c=>c.LastName).ToList());
                     return stringWriter.ToString();
                 }
             }
