@@ -36,10 +36,10 @@ namespace SimplifyTests
         {
             using (var stringWriter = new StringWriter())
             {
-                using (var writer = XmlWriter.Create(stringWriter))
+                using (var writer = XmlWriter.Create(stringWriter, new XmlWriterSettings { Indent = true }))
                 {
                     var serializer = new XmlSerializer(vipCustomers.GetType());
-                    serializer.Serialize(writer, vipCustomers.OrderBy(c=>c.LastName).ToList());
+                    serializer.Serialize(writer, vipCustomers.OrderBy(c => c.LastName).ToList());
                     return stringWriter.ToString();
                 }
             }

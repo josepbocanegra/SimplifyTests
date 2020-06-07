@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using ApprovalTests;
 using ApprovalTests.Reporters;
+using ApprovalTests.Scrubber;
 using ApprovalTests.Xml;
 using Newtonsoft.Json;
 using Xunit;
@@ -47,8 +48,10 @@ namespace SimplifyTests.Tests
             vipCustomers.Add(new Customer("John", "Smith"));
 
             var report = vipCustomers.Report();
-
-            XmlApprovals.VerifyOrderedXml(report);
+            
+            var removeCreationTime = ScrubberUtils.RemoveLinesContaining("CreationTime");
+            XmlApprovals.VerifyOrderedXml(report, ScrubberUtils.Combine(removeCreationTime));
+            
         }
 
     }

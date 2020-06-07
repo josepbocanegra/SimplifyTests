@@ -13,10 +13,12 @@ namespace SimplifyTests
         {
             FirstName = firstName;
             LastName = lastName;
+            CreationTime = DateTime.UtcNow;
         }
 
         public string FirstName { get; set; }
         public string LastName { get; set; }
+        public DateTime CreationTime { get; set; }
 
         public string FullName()
         {
