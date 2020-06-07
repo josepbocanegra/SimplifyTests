@@ -23,5 +23,10 @@ namespace SimplifyTests
         {
             return vipCustomers.OrderBy(c=>c.FullName()).Select(c => c.FullName()).ToList();
         }
+
+        public List<Customer> InAlphabeticalOrderByLastName()
+        {
+            return vipCustomers;
+        }
     }
 }
