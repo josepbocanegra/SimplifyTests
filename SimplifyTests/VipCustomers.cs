@@ -21,7 +21,7 @@ namespace SimplifyTests
 
         public List<string> InAlphabeticalOrder()
         {
-            return vipCustomers.Select(c => c.FullName()).ToList();
+            return vipCustomers.OrderBy(c=>c.FullName()).Select(c => c.FullName()).ToList();
         }
     }
 }
