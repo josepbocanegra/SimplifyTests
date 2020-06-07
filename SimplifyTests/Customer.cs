@@ -13,5 +13,10 @@ namespace SimplifyTests
 
         public string FirstName { get; }
         public string LastName { get; }
+
+        public string FullName()
+        {
+            return $"{FirstName} {LastName}";
+        }
     }
 }
