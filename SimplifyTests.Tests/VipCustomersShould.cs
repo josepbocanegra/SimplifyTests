@@ -44,8 +44,9 @@ namespace SimplifyTests.Tests
         {
             var vipCustomers = new VipCustomers();
             vipCustomers.Add(new Customer("Albert", "Thomson"));
-            vipCustomers.Add(new Customer("Mandy", "Harris"));
             vipCustomers.Add(new Customer("John", "Smith"));
+            vipCustomers.Add(new Customer("Mandy", "Harris"));
+            
 
             var report = vipCustomers.Report();
             
