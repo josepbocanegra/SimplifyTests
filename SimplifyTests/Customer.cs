@@ -5,6 +5,7 @@ namespace SimplifyTests
 {
     public class Customer
     {
+        //For the sake of simplicity for XML test example, lets implement a parameterless constructor and public setters.
         public Customer()
         {
         }
